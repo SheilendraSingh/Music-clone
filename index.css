@@ -1,0 +1,170 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(16, 16, 16);
+}
+img {
+  border-radius: 8px;
+}
+a {
+  text-decoration: none;
+  color: rgb(198, 193, 200);
+}
+.nav {
+  background-color: rgb(21, 21, 21);
+  display: flex;
+  flex: auto;
+  align-items: center;
+  padding-top: 10px;
+  margin-top: 0;
+  top: 0;
+  position: sticky;
+}
+.nav1a {
+  display: flex;
+  flex: auto;
+  align-items: center;
+  margin: 0 10px;
+}
+.nav1ul1,
+.nav1ul2 {
+  margin-left: 10px;
+}
+.nav1ul1 img {
+  height: 50px;
+}
+.nav2a1,
+.nav2a2 {
+  margin-left: 10px;
+}
+
+.lang {
+  background: linear-gradient(rgb(21, 21, 21), rgb(16, 16, 16));
+  color: rgb(198, 193, 200);
+  padding-left: 40px;
+  padding-top: 40px;
+}
+.lang h2 {
+  margin-bottom: 50px;
+}
+.lang div a {
+  padding: 10px 20px;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+.lang div a:hover {
+  background-color: rgb(50, 50, 50);
+  color: rgb(255, 255, 255);
+}
+.langContainer {
+  display: flex;
+  flex: auto;
+}
+.artists,
+.playlists {
+  display: inline-block;
+  color: rgb(198, 193, 200);
+  margin-left: 20px;
+  margin-top: 40px;
+}
+.artists-container,
+.playcontainer1,
+.playcontainer2 {
+  display: flex;
+  flex: auto;
+  margin-bottom: 50px;
+}
+.arijit,
+.atif,
+.kk,
+.honey-singh,
+.Other-artists,
+.fast1,
+.fast2,
+.fast3,
+.fast4,
+.fast5,
+.fast6,
+.fast7,
+.fast8,
+.fast9 {
+  padding: 40px 17px;
+  margin-right: 50px;
+  background-color: rgb(24, 24, 24);
+  max-width: 204px;
+  color: rgb(198, 193, 200);
+  align-items: center;
+  text-align: center;
+  border-radius: 8px;
+}
+.fast1,
+.fast2,
+.fast3,
+.fast4,
+.fast5,
+.fast6,
+.fast7,
+.fast8,
+.fast9 {
+  padding: 30px 24px 40px;
+}
+.arijit:hover,
+.atif:hover,
+.kk:hover,
+.honey-singh:hover,
+.Other-artists:hover,
+.fast1:hover,
+.fast2:hover,
+.fast3:hover,
+.fast4:hover,
+.fast5:hover,
+.fast6:hover,
+.fast7:hover,
+.fast8:hover,
+.fast9:hover {
+  background-color: rgb(30, 30, 30);
+  color: rgb(16, 3, 16);
+}
+.artists img,
+.playlists img {
+  height: 170px;
+  padding-bottom: 30px;
+}
+.play {
+  background-color: rgb(0, 0, 0);
+  bottom: 0;
+  position: sticky;
+  color: aliceblue;
+  display: flex;
+  flex: auto;
+  align-items: center;
+}
+.play img {
+  height: 60px;
+}
+.masterplay1 {
+  display: flex;
+  flex: auto;
+  width: 200px;
+  align-items: center;
+}
+.masterplay2 {
+  display: block;
+  align-items: center;
+  width: 1400px;
+  position: relative;
+}
+.playitems {
+  display: flex;
+  flex: auto;
+}
+#songtime,
+#volume,
+.playicon {
+  cursor: pointer;
+}
+.masterplay3 {
+  right: 0;
+  position: absolute;
+}

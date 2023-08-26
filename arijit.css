@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(30, 5, 30);
+}
+a {
+  text-decoration: none;
+  color: rgb(198, 193, 200);
+}
+.nav {
+  background-color: black;
+  display: flex;
+  flex: auto;
+  align-items: center;
+  padding-top: 10px;
+  margin-top: 0;
+}
+.nav1a {
+  display: flex;
+  flex: auto;
+  align-items: center;
+  margin: 0 10px;
+}
+.nav1ul1,
+.nav1ul2 {
+  margin-left: 10px;
+}
+.nav1ul1 img {
+  height: 50px;
+}
+.nav2a1,
+.nav2a2 {
+  margin-left: 10px;
+}
+
+.heading {
+  color: rgb(198, 193, 200);
+  margin-left: 20px;
+}
