@@ -40,14 +40,25 @@ a {
 }
 .play-section {
   width: 70vw;
+  height: 75.75vh;
   margin: 50px auto;
   box-shadow: -10px -20px 20px rgb(16, 16, 16);
 }
 .play-details {
   display: flex;
   width: 100%;
-  height: 700px;
-  overflow: auto;
+  height: 69.93vh;
+  overflow-y: scroll;
+}
+.play-details::-webkit-scrollbar {
+  width: 15px;
+}
+.play-details::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: rgb(16, 16, 16);
+}
+.play-details::-webkit-scrollbar-thumb {
+  background-color: rgb(54, 54, 54);
 }
 .song-items {
   display: flex;
@@ -56,23 +67,20 @@ a {
   margin: 10px 0 10px 2vw;
 }
 .song-items div {
-  margin: 0 5px;
-}
-.song-items div {
-  margin-left: 5px;
+  margin: 0 0.26vw;
 }
 .song-list-play {
-  margin-left: 30px;
+  margin-left: 1.5625vw;
 }
 .song-items img {
-  height: 40px;
+  height: 3.703vh;
 }
 .song-banner img {
-  height: 550px;
-  margin: 50px 0;
+  width: 28.64vw;
+  margin: 2.6vw 0;
   margin-left: 20.3vw;
-  z-index: 1;
-  position: fixed;
+
+  position: absolute;
 }
 .heading {
   color: rgb(198, 193, 200);
@@ -86,7 +94,7 @@ a {
   flex: auto;
   background-color: rgb(0, 0, 0);
   bottom: 0;
-  position: sticky;
+  position: absolute;
   color: aliceblue;
   align-items: center;
 }
@@ -145,9 +153,19 @@ a {
 .masterplay3 div {
   display: flex;
   right: 0;
-  position: sticky;
+  position: absolute;
   align-items: center;
 }
 #volume {
-  margin-left: 10px;
+  margin: 0 20px 0 10px;
+}
+@media only screen and (max-width: 1438px) {
+  .song-banner {
+    display: none;
+  }
+  .songs {
+    margin: 0 auto;
+  }
+}
+@media only screen and (max-width: 768px) {
 }
