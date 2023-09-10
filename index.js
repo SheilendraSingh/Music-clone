@@ -31,9 +31,8 @@ audioElement.addEventListener("timeupdate", () => {
 });
 songtime.addEventListener("input", (event) => {
   audioElement.currentTime = (songtime.value / 100) * audioElement.duration;
-  songtime.width = audioElement.currentTime;
-  songtime.style.width = "red";
 });
+songtime;
 volumeControl.addEventListener("input", () => {
   const volume = volumeControl.value;
   audioElement.volume = volume;
