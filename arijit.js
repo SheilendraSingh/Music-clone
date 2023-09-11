@@ -413,6 +413,21 @@ songItems.forEach((element, i) => {
   element.getElementsByClassName("songName")[0].innerText = songs[i].songName;
   element.getElementsByClassName("movieName")[0].innerText = songs[i].movieName;
   element.getElementsByClassName("time-stamp")[0].innerText = songs[i].duration;
+  element.addEventListener("click", (e) => {
+    Index = parseInt(e.target.id);
+    audioElement.src = songs[Index].filePath;
+    audioElement.currentTime = 0;
+    audioElement.play();
+    mainplaybutton.classList.remove("fa-circle-play");
+    mainplaybutton.classList.add("fa-circle-pause");
+    firstPlayButton.classList.remove("fa-circle-play");
+    firstPlayButton.classList.add("fa-circle-pause");
+    document.getElementById("songBannerImg").src = songs[Index].coverPath;
+    document.getElementById("masterPlayBanner").src = songs[Index].coverPath;
+    document.getElementById("masterPlayName").innerText = songs[Index].songName;
+    document.getElementById("masterPlayMovie").innerText =
+      songs[Index].movieName;
+  });
 });
 
 volumeControl.addEventListener("input", () => {
@@ -433,32 +448,14 @@ volumeControl.addEventListener("input", () => {
   }
 });
 
-Array.from(document.getElementsByClassName("song-items")).forEach((element) => {
-  element.addEventListener("click", (e) => {
-    Index = parseInt(e.target.id);
-    audioElement.src = songs[Index].filePath;
-    audioElement.currentTime = 0;
-    audioElement.play();
-    mainplaybutton.classList.remove("fa-circle-play");
-    mainplaybutton.classList.add("fa-circle-pause");
-    firstPlayButton.classList.remove("fa-circle-play");
-    firstPlayButton.classList.add("fa-circle-pause");
-    document.getElementById("songBannerImg").src = songs[Index].coverPath;
-    document.getElementById("masterPlayBanner").src = songs[Index].coverPath;
-    document.getElementById("masterPlayName").innerText = songs[Index].songName;
-    document.getElementById("masterPlayMovie").innerText =
-      songs[Index].movieName;
-  });
-});
-function changeLikeIcon(element) {
-  if (element.src == "like-transp.png") {
-    element.src = "like-green.png";
-  } else if (element.src == "like-green.png") {
-    element.src = "like-transp.png";
-  }
-}
 document.addEventListener("click", (e) => {
-  if (e.target.className == "like-icon") {
-    changeLikeIcon(e.target);
+  if (e.target.className === "like-icon") {
+    if (e.target.src === "like-transp.png") {
+      console.log(1);
+      e.target.src = "like-green.png";
+    } else {
+      console.log(2);
+      e.target.src = "like-transp.png";
+    }
   }
 });
