@@ -70,16 +70,19 @@ a {
 .song-banner i {
   right: 0;
   position: absolute;
-  margin-right: 3.8vw;
+  margin-right: 2.2vw;
   margin-top: 13vw;
   font-size: 4vw;
-  color: rgb(0, 255, 136);
+  color: #00ff88;
 }
 .firstplaybutton {
   cursor: pointer;
 }
+.notation {
+  margin: 0 1vw 0 0;
+}
 .songs {
-  width: 88vw;
+  width: 95vw;
   margin: 1vw auto;
 }
 .song-items {
@@ -87,25 +90,40 @@ a {
   display: flex;
   color: white;
   align-items: center;
-  padding: 1vh 1.2vw;
+  padding: 0.8vh 1.2vw;
   margin: 0.5vh auto;
   cursor: pointer;
   border-radius: 8px;
 }
 .song-items:hover {
-  background-color: rgb(21, 21, 21);
+  background-color: rgb(40, 40, 40);
 }
 .song-items div {
   margin: 0 0.26vw;
 }
 .song-details {
-  display: flex;
+  display: block;
+  align-items: center;
+}
+.songName {
+  font-size: 1.2rem;
+}
+.movieName {
+  font-size: 0.9rem;
+  color: rgb(163, 163, 163);
 }
 .song-list-play {
+  display: flex;
   margin-left: auto;
 }
-.song-items img {
-  height: 4vh;
+.like-icon {
+  width: 1.1vw;
+  margin: 0 2vw 0 0;
+  z-index: 1;
+}
+
+.songImg img {
+  height: 5.4vh;
 }
 
 .play {

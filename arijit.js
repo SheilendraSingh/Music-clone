@@ -8,6 +8,8 @@ let volumebutton = document.getElementById("volumebutton");
 let songtime = document.getElementById("songtime");
 let volumeControl = document.getElementById("volume");
 let songItems = Array.from(document.getElementsByClassName("song-items"));
+let iconHeart = "like-green.png";
+console.log(iconHeart);
 let songs = [
   {
     Indexnum: "1.",
@@ -410,7 +412,6 @@ songItems.forEach((element, i) => {
   element.getElementsByClassName("songImg")[0].src = songs[i].coverPath;
   element.getElementsByClassName("songName")[0].innerText = songs[i].songName;
   element.getElementsByClassName("movieName")[0].innerText = songs[i].movieName;
-  console.log(element, songs[i].duration);
   element.getElementsByClassName("time-stamp")[0].innerText = songs[i].duration;
 });
 
@@ -448,4 +449,12 @@ Array.from(document.getElementsByClassName("song-items")).forEach((element) => {
     document.getElementById("masterPlayMovie").innerText =
       songs[Index].movieName;
   });
+});
+const changeLikeIcon = (element) => {
+  element.src = "like-green.png";
+};
+document.addEventListener("click", (e) => {
+  if (e.target.className == "like-icon") {
+    changeLikeIcon(e.target);
+  }
 });
