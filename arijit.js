@@ -450,14 +450,15 @@ Array.from(document.getElementsByClassName("song-items")).forEach((element) => {
       songs[Index].movieName;
   });
 });
-const changeLikeIcon = (element) => {
-  element.src = "like-green.png";
-};
-const 
+function changeLikeIcon(element) {
+  if (element.src == "like-transp.png") {
+    element.src = "like-green.png";
+  } else if (element.src == "like-green.png") {
+    element.src = "like-transp.png";
+  }
+}
 document.addEventListener("click", (e) => {
-  if (e.target.src == "like-transp.png") {
+  if (e.target.className == "like-icon") {
     changeLikeIcon(e.target);
-  }else if (e.target.src == "like-green.png") {
-
   }
 });
