@@ -453,8 +453,11 @@ Array.from(document.getElementsByClassName("song-items")).forEach((element) => {
 const changeLikeIcon = (element) => {
   element.src = "like-green.png";
 };
+const 
 document.addEventListener("click", (e) => {
-  if (e.target.className == "like-icon") {
+  if (e.target.src == "like-transp.png") {
     changeLikeIcon(e.target);
+  }else if (e.target.src == "like-green.png") {
+
   }
 });
