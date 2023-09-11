@@ -48,43 +48,52 @@ a {
   margin-left: 10px;
 }
 .play-section {
-  width: 70vw;
-  height: 75.75vh;
-  margin: 50px auto;
+  width: 100vw;
+  height: 45vh;
+  margin: 50px 0;
   background-color: rgb(16, 16, 16);
   box-shadow: -10px -20px 20px rgb(16, 16, 16);
 }
+.song-banner {
+  width: 100vw;
+}
 .heading {
-  width: 400px;
-  font-size: 40px;
-  margin-bottom: 20px;
+  width: 20vw;
+  font-size: 2vw;
+  margin: 0 0 1vw 3.3vw;
+  color: rgb(198, 193, 200);
 }
-.play-details {
-  display: flex;
-  width: 100%;
-  height: 69.93vh;
-  overflow-y: scroll;
+.song-banner img {
+  width: 18vw;
+  margin: 0 3.3vw;
 }
-.play-details::-webkit-scrollbar {
-  width: 15px;
+.song-banner i {
+  right: 0;
+  position: absolute;
+  margin-right: 3.8vw;
+  margin-top: 13vw;
+  font-size: 4vw;
+  color: rgb(0, 255, 136);
 }
-.play-details::-webkit-scrollbar-track {
-  border-radius: 10px;
-  background-color: rgb(16, 16, 16);
-}
-.play-details::-webkit-scrollbar-thumb {
-  background-color: rgb(54, 54, 54);
+.firstplaybutton {
+  cursor: pointer;
 }
 .songs {
-  width: 40%;
-  margin-right: 2%;
+  width: 88vw;
+  margin: 1vw auto;
 }
 .song-items {
-  width: 78.47;
+  width: 100%;
   display: flex;
   color: white;
   align-items: center;
-  margin: 10px auto 10px;
+  padding: 1vh 1.2vw;
+  margin: 0.5vh auto;
+  cursor: pointer;
+  border-radius: 8px;
+}
+.song-items:hover {
+  background-color: rgb(21, 21, 21);
 }
 .song-items div {
   margin: 0 0.26vw;
@@ -96,25 +105,7 @@ a {
   margin-left: auto;
 }
 .song-items img {
-  height: 3.703vh;
-}
-.song-banner {
-  width: 58%;
-}
-.song-banner div {
-  width: 32.078vw;
-  display: flex;
-  margin: auto;
-  z-index: 1;
-  position: absolute;
-}
-.song-banner div img {
-  width: 28.078vw;
-  margin: 0 auto;
-}
-.heading {
-  color: rgb(198, 193, 200);
-  margin-left: 20px;
+  height: 4vh;
 }
 
 .play {
@@ -125,7 +116,7 @@ a {
   background-color: rgb(0, 0, 0);
   z-index: 1;
   bottom: 0;
-  position: fixed;
+  position: sticky;
   color: aliceblue;
   align-items: center;
 }
@@ -206,7 +197,7 @@ a {
 #volume {
   margin: 0 20px 0 10px;
 }
-@media only screen and (max-width: 1350px) {
+@media only screen and (max-width: 1024px) {
   .song-banner img {
     width: 20.64vw;
   }
@@ -214,7 +205,7 @@ a {
     display: block;
   }
 }
-@media only screen and (max-width: 950px) {
+@media only screen and (max-width: 768px) {
   .play-section {
     width: 90%;
   }
@@ -241,7 +232,7 @@ a {
     font-size: 37px;
   }
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 425px) {
   .song-details {
     display: flex;
   }
@@ -259,5 +250,5 @@ a {
     margin: 0 auto 15px;
   }
 }
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 375px) {
 }
