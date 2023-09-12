@@ -225,7 +225,28 @@ a {
     display: block;
   }
 }
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) and(min-width: 425px) {
+  .song-banner {
+    width: 100vw;
+  }
+  .heading {
+    width: 20vw;
+    font-size: 2vw;
+    margin: 0 0 1vw 3.3vw;
+    color: rgb(198, 193, 200);
+  }
+  .song-banner img {
+    width: 50%;
+    margin: 0 3.3vw;
+  }
+  .song-banner i {
+    right: 0;
+    position: absolute;
+    margin-right: 2.2vw;
+    margin-top: 13vw;
+    font-size: 4vw;
+    color: #00ff88;
+  }
   .play-section {
     width: 90%;
   }
@@ -258,12 +279,15 @@ a {
     width: 100%;
     margin: 0 auto;
   }
+  .notation {
+    display: none;
+  }
   .song-details {
     display: block;
   }
   .song-items {
     width: 95vw;
-    margin: 10px 0;
+    margin: 10px auto;
   }
   .masterplay1,
   .masterplay3 {

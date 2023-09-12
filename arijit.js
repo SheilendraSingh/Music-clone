@@ -447,3 +447,13 @@ volumeControl.addEventListener("input", () => {
     volumebutton.classList.add("fa-volume-high");
   }
 });
+
+document.addEventListener("click", (e) => {
+  if (e.target.className == "like-icon") {
+    if (e.target.src == "http://127.0.0.1:5500/like-transp.png") {
+      e.target.src = "http://127.0.0.1:5500/like-green.png";
+    } else {
+      e.target.src = "http://127.0.0.1:5500/like-transp.png";
+    }
+  }
+});
