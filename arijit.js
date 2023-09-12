@@ -416,8 +416,8 @@ songItems.forEach((element, i) => {
   element.addEventListener("click", (e) => {
     Index = parseInt(e.target.id);
     audioElement.src = songs[Index].filePath;
-    audioElement.currentTime = 0;
     audioElement.play();
+    audioElement.currentTime = 0;
     mainplaybutton.classList.remove("fa-circle-play");
     mainplaybutton.classList.add("fa-circle-pause");
     firstPlayButton.classList.remove("fa-circle-play");
@@ -445,17 +445,5 @@ volumeControl.addEventListener("input", () => {
     volumebutton.classList.remove("fa-volume-xmark");
     volumebutton.classList.remove("fa-volume-low");
     volumebutton.classList.add("fa-volume-high");
-  }
-});
-
-document.addEventListener("click", (e) => {
-  if (e.target.className === "like-icon") {
-    if (e.target.src === "like-transp.png") {
-      console.log(1);
-      e.target.src = "like-green.png";
-    } else {
-      console.log(2);
-      e.target.src = "like-transp.png";
-    }
   }
 });

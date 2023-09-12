@@ -64,7 +64,7 @@ a {
   color: rgb(198, 193, 200);
 }
 .song-banner img {
-  width: 18vw;
+  width: 18%;
   margin: 0 3.3vw;
 }
 .song-banner i {
@@ -117,9 +117,9 @@ a {
   margin-left: auto;
 }
 .like-icon {
-  width: 1.1vw;
+  width: 20px;
+  height: 20px;
   margin: 0 2vw 0 0;
-  z-index: 1;
 }
 
 .songImg img {
@@ -215,6 +215,8 @@ a {
 #volume {
   margin: 0 20px 0 10px;
 }
+@media only screen and (max-width: 2560px) and (orientation: landscape) {
+}
 @media only screen and (max-width: 1024px) {
   .song-banner img {
     width: 20.64vw;
@@ -230,9 +232,7 @@ a {
   .play-details {
     width: 100%;
   }
-  .song-banner {
-    display: none;
-  }
+
   .songs {
     width: 50%;
     margin: 0 auto;
@@ -245,28 +245,32 @@ a {
     display: flex;
   }
   .heading {
-    width: 355px;
-    margin: 0 auto 15px;
+    width: 70vw;
+    margin: 0 auto 15px 3vw;
     font-size: 37px;
   }
 }
-@media only screen and (max-width: 425px) {
-  .song-details {
-    display: flex;
+@media only screen and (max-width: 425px) and (orientation: portrait) {
+  .play-section {
+    display: none;
   }
   .songs {
     width: 100%;
     margin: 0 auto;
   }
+  .song-details {
+    display: block;
+  }
   .song-items {
-    width: 90%;
+    width: 95vw;
     margin: 10px 0;
   }
-  .heading {
-    width: 300px;
-    font-size: 30px;
-    margin: 0 auto 15px;
+  .masterplay1,
+  .masterplay3 {
+    display: none;
   }
-}
-@media only screen and (max-width: 375px) {
+  .masterplay2 {
+    width: 95vw;
+    margin: 0 auto;
+  }
 }
