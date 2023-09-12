@@ -2,7 +2,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: rgb(16, 16, 16);
-  width: 99.17vw;
+  width: 100vw;
 }
 body::-webkit-scrollbar {
   width: 16px;
@@ -13,11 +13,15 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   background-color: rgb(38, 37, 37);
 }
+img {
+  border-radius: 8px;
+}
 a {
   text-decoration: none;
   color: rgb(198, 193, 200);
 }
 .nav {
+  width: 100vw;
   background-color: rgb(21, 21, 21);
   display: flex;
   flex: auto;
@@ -227,4 +231,17 @@ a {
 }
 #volume {
   margin: 0 20px 0 10px;
+}
+@media only screen and (max-width: 425px) and (orientation: portrait) {
+  .nav {
+    width: 100vw;
+  }
+  .masterplay1,
+  .masterplay3 {
+    display: none;
+  }
+  .masterplay2 {
+    width: 95vw;
+    margin: 0 auto;
+  }
 }
