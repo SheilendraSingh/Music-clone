@@ -52,11 +52,19 @@ a {
 .lang {
   background: linear-gradient(rgb(21, 21, 21), rgb(16, 16, 16));
   color: rgb(198, 193, 200);
-  padding-left: 40px;
-  padding-top: 40px;
+  padding-left: 2vw;
+  padding-top: 3vh;
 }
 .lang h2 {
   margin-bottom: 50px;
+}
+.langContainer {
+  display: flex;
+  flex: auto;
+  justify-content: center;
+}
+.langContainer div {
+  justify-content: center;
 }
 .lang div a {
   padding: 10px 20px;
@@ -68,23 +76,33 @@ a {
   background-color: rgb(50, 50, 50);
   color: rgb(255, 255, 255);
 }
-.langContainer {
-  display: flex;
-  flex: auto;
-}
+
 .artists,
 .playlists {
   display: inline-block;
   color: rgb(198, 193, 200);
-  margin-left: 20px;
-  margin-top: 40px;
+  margin-left: 1vw;
+  margin-top: 3vh;
 }
 .artists-container,
-.playcontainer1,
-.playcontainer2 {
+.playcontainer1 {
+  width: 99vw;
   display: flex;
   flex: auto;
   margin-bottom: 50px;
+  overflow-x: scroll;
+}
+.artists-container::-webkit-scrollbar,
+.playcontainer1::-webkit-scrollbar {
+  width: 16px;
+}
+.artists-container::-webkit-scrollbar-track,
+.playcontainer1::-webkit-scrollbar-track {
+  background: rgb(16, 16, 16);
+}
+.artists-container::-webkit-scrollbar-thumb,
+.playcontainer1::-webkit-scrollbar-thumb {
+  background-color: rgb(23, 23, 23);
 }
 .arijit,
 .atif,
@@ -204,6 +222,7 @@ a {
 #volume::-webkit-slider-thumb:hover {
   background-color: white;
 }
+
 .playitems {
   text-align: center;
 }
@@ -232,10 +251,7 @@ a {
 #volume {
   margin: 0 20px 0 10px;
 }
-@media only screen and (max-width: 425px) and (orientation: portrait) {
-  .nav {
-    width: 100vw;
-  }
+@media only screen and (max-width: 492px) and (orientation: portrait) {
   .masterplay1,
   .masterplay3 {
     display: none;

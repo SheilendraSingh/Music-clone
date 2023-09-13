@@ -413,11 +413,14 @@ songItems.forEach((element, i) => {
   element.getElementsByClassName("songName")[0].innerText = songs[i].songName;
   element.getElementsByClassName("movieName")[0].innerText = songs[i].movieName;
   element.getElementsByClassName("time-stamp")[0].innerText = songs[i].duration;
+});
+Array.from(document.getElementsByClassName("songName")).forEach((element) => {
   element.addEventListener("click", (e) => {
+    console.log(e.target.className);
     Index = parseInt(e.target.id);
     audioElement.src = songs[Index].filePath;
+
     audioElement.play();
-    audioElement.currentTime = 0;
     mainplaybutton.classList.remove("fa-circle-play");
     mainplaybutton.classList.add("fa-circle-pause");
     firstPlayButton.classList.remove("fa-circle-play");
@@ -427,6 +430,8 @@ songItems.forEach((element, i) => {
     document.getElementById("masterPlayName").innerText = songs[Index].songName;
     document.getElementById("masterPlayMovie").innerText =
       songs[Index].movieName;
+
+    document.getElementById("TotalTime").innerText = songs[Index].duration;
   });
 });
 
@@ -447,13 +452,12 @@ volumeControl.addEventListener("input", () => {
     volumebutton.classList.add("fa-volume-high");
   }
 });
-
 document.addEventListener("click", (e) => {
   if (e.target.className == "like-icon") {
-    if (e.target.src == "http://127.0.0.1:5500/like-transp.png") {
-      e.target.src = "http://127.0.0.1:5500/like-green.png";
+    if (e.target.getAttribute("src") == "like-transp.png") {
+      e.target.setAttribute("src", "like-green.png");
     } else {
-      e.target.src = "http://127.0.0.1:5500/like-transp.png";
+      e.target.setAttribute("src", "like-transp.png");
     }
   }
 });

@@ -215,7 +215,7 @@ a {
 #volume {
   margin: 0 20px 0 10px;
 }
-@media only screen and (max-width: 2560px) and (orientation: landscape) {
+@media only screen and (max-width: 2560px) {
 }
 @media only screen and (max-width: 1024px) {
   .song-banner img {
@@ -271,7 +271,7 @@ a {
     font-size: 37px;
   }
 }
-@media only screen and (max-width: 425px) and (orientation: portrait) {
+@media only screen and (max-width: 492px) {
   .play-section {
     display: none;
   }
