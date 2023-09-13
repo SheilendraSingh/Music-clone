@@ -430,7 +430,7 @@ Array.from(document.getElementsByClassName("songName")).forEach((element) => {
     document.getElementById("masterPlayName").innerText = songs[Index].songName;
     document.getElementById("masterPlayMovie").innerText =
       songs[Index].movieName;
-
+    currenttime();
     document.getElementById("TotalTime").innerText = songs[Index].duration;
   });
 });

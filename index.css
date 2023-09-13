@@ -61,16 +61,15 @@ a {
 .langContainer {
   display: flex;
   flex: auto;
-  justify-content: center;
 }
 .langContainer div {
-  justify-content: center;
+  margin-right: 1vw;
 }
-.lang div a {
+.langContainer div a {
+  justify-content: center;
   padding: 10px 20px;
   border: 1px solid black;
   border-radius: 5px;
-  margin-right: 20px;
 }
 .lang div a:hover {
   background-color: rgb(50, 50, 50);
@@ -237,6 +236,14 @@ a {
 .playicon {
   cursor: pointer;
 }
+#currentTime {
+  left: -12px;
+  position: absolute;
+}
+#TotalTime {
+  right: -20px;
+  position: absolute;
+}
 .masterplay3 {
   display: flex;
   width: 25%;
@@ -259,5 +266,13 @@ a {
   .masterplay2 {
     width: 95vw;
     margin: 0 auto;
+  }
+  #currentTime {
+    left: 0;
+    position: absolute;
+  }
+  #TotalTime {
+    right: 0;
+    position: absolute;
   }
 }

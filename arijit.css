@@ -122,7 +122,7 @@ a {
   margin: 0 2vw 0 0;
 }
 
-.songImg img {
+.songImg {
   height: 5.4vh;
 }
 
@@ -201,6 +201,14 @@ a {
 #volume,
 .playicon {
   cursor: pointer;
+}
+#currentTime {
+  left: -12px;
+  position: absolute;
+}
+#TotalTime {
+  right: -20px;
+  position: absolute;
 }
 .masterplay3 {
   display: flex;
@@ -296,5 +304,13 @@ a {
   .masterplay2 {
     width: 95vw;
     margin: 0 auto;
+  }
+  #currentTime {
+    left: 0;
+    position: absolute;
+  }
+  #TotalTime {
+    right: 0;
+    position: absolute;
   }
 }
