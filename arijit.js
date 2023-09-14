@@ -460,4 +460,46 @@ document.addEventListener("click", (e) => {
       e.target.setAttribute("src", "like-transp.png");
     }
   }
+  if (e.target.id == "nextplaybutton") {
+    if (songIndex >= 18) {
+      songIndex = 0;
+    } else {
+      songIndex += 1;
+    }
+    audioElement.src = songs[songIndex].filePath;
+    audioElement.play();
+    mainplaybutton.classList.remove("fa-circle-play");
+    mainplaybutton.classList.add("fa-circle-pause");
+    firstPlayButton.classList.remove("fa-circle-play");
+    firstPlayButton.classList.add("fa-circle-pause");
+    document.getElementById("songBannerImg").src = songs[songIndex].coverPath;
+    document.getElementById("masterPlayBanner").src =
+      songs[songIndex].coverPath;
+    document.getElementById("masterPlayName").innerText =
+      songs[songIndex].songName;
+    document.getElementById("masterPlayMovie").innerText =
+      songs[songIndex].movieName;
+    document.getElementById("TotalTime").innerText = songs[songIndex].duration;
+  }
+  if (e.target.id == "preplaybutton") {
+    if (songIndex <= 0) {
+      songIndex = 18;
+    } else {
+      songIndex -= 1;
+    }
+    audioElement.src = songs[songIndex].filePath;
+    audioElement.play();
+    mainplaybutton.classList.remove("fa-circle-play");
+    mainplaybutton.classList.add("fa-circle-pause");
+    firstPlayButton.classList.remove("fa-circle-play");
+    firstPlayButton.classList.add("fa-circle-pause");
+    document.getElementById("songBannerImg").src = songs[songIndex].coverPath;
+    document.getElementById("masterPlayBanner").src =
+      songs[songIndex].coverPath;
+    document.getElementById("masterPlayName").innerText =
+      songs[songIndex].songName;
+    document.getElementById("masterPlayMovie").innerText =
+      songs[songIndex].movieName;
+    document.getElementById("TotalTime").innerText = songs[songIndex].duration;
+  }
 });

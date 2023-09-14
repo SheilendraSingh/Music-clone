@@ -1,6 +1,6 @@
 let songIndex = 0;
 let audioElement = new Audio(
-  "Arijit-singh/Aasan Nahin Yahan Aashiqui 2 320 Kbps/Aasan Nahin Yahan Aashiqui 2 320 Kbps.mp3"
+  "Atif Aslam\\/12 Bajay Atif Aslam/12 Bajay Atif Aslam 320 Kbps.mp3"
 );
 let firstPlayButton = document.getElementById("firstPlayButton");
 let mainplaybutton = document.getElementById("mainplaybutton");
@@ -8,8 +8,6 @@ let volumebutton = document.getElementById("volumebutton");
 let songtime = document.getElementById("songtime");
 let volumeControl = document.getElementById("volume");
 let songItems = Array.from(document.getElementsByClassName("song-items"));
-let iconHeart = "like-green.png";
-console.log(iconHeart);
 let songs = [
   {
     Indexnum: "1.",
@@ -236,22 +234,21 @@ songItems.forEach((element, i) => {
 });
 Array.from(document.getElementsByClassName("songName")).forEach((element) => {
   element.addEventListener("click", (e) => {
-    console.log(e.target.className);
-    Index = parseInt(e.target.id);
-    audioElement.src = songs[Index].filePath;
-
+    songIndex = parseInt(e.target.id);
+    audioElement.src = songs[songIndex].filePath;
     audioElement.play();
     mainplaybutton.classList.remove("fa-circle-play");
     mainplaybutton.classList.add("fa-circle-pause");
     firstPlayButton.classList.remove("fa-circle-play");
     firstPlayButton.classList.add("fa-circle-pause");
-    document.getElementById("songBannerImg").src = songs[Index].coverPath;
-    document.getElementById("masterPlayBanner").src = songs[Index].coverPath;
-    document.getElementById("masterPlayName").innerText = songs[Index].songName;
+    document.getElementById("songBannerImg").src = songs[songIndex].coverPath;
+    document.getElementById("masterPlayBanner").src =
+      songs[songIndex].coverPath;
+    document.getElementById("masterPlayName").innerText =
+      songs[songIndex].songName;
     document.getElementById("masterPlayMovie").innerText =
-      songs[Index].movieName;
-    currenttime();
-    document.getElementById("TotalTime").innerText = songs[Index].duration;
+      songs[songIndex].movieName;
+    document.getElementById("TotalTime").innerText = songs[songIndex].duration;
   });
 });
 
@@ -274,10 +271,53 @@ volumeControl.addEventListener("input", () => {
 });
 document.addEventListener("click", (e) => {
   if (e.target.className == "like-icon") {
+    console.log(123);
     if (e.target.getAttribute("src") == "like-transp.png") {
       e.target.setAttribute("src", "like-green.png");
     } else {
       e.target.setAttribute("src", "like-transp.png");
     }
+  }
+  if (e.target.id == "nextplaybutton") {
+    if (songIndex >= 18) {
+      songIndex = 0;
+    } else {
+      songIndex += 1;
+    }
+    audioElement.src = songs[songIndex].filePath;
+    audioElement.play();
+    mainplaybutton.classList.remove("fa-circle-play");
+    mainplaybutton.classList.add("fa-circle-pause");
+    firstPlayButton.classList.remove("fa-circle-play");
+    firstPlayButton.classList.add("fa-circle-pause");
+    document.getElementById("songBannerImg").src = songs[songIndex].coverPath;
+    document.getElementById("masterPlayBanner").src =
+      songs[songIndex].coverPath;
+    document.getElementById("masterPlayName").innerText =
+      songs[songIndex].songName;
+    document.getElementById("masterPlayMovie").innerText =
+      songs[songIndex].movieName;
+    document.getElementById("TotalTime").innerText = songs[songIndex].duration;
+  }
+  if (e.target.id == "preplaybutton") {
+    if (songIndex <= 0) {
+      songIndex = 18;
+    } else {
+      songIndex -= 1;
+    }
+    audioElement.src = songs[songIndex].filePath;
+    audioElement.play();
+    mainplaybutton.classList.remove("fa-circle-play");
+    mainplaybutton.classList.add("fa-circle-pause");
+    firstPlayButton.classList.remove("fa-circle-play");
+    firstPlayButton.classList.add("fa-circle-pause");
+    document.getElementById("songBannerImg").src = songs[songIndex].coverPath;
+    document.getElementById("masterPlayBanner").src =
+      songs[songIndex].coverPath;
+    document.getElementById("masterPlayName").innerText =
+      songs[songIndex].songName;
+    document.getElementById("masterPlayMovie").innerText =
+      songs[songIndex].movieName;
+    document.getElementById("TotalTime").innerText = songs[songIndex].duration;
   }
 });
