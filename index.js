@@ -511,7 +511,7 @@ volumeControl.addEventListener("input", () => {
   audioElement.volume = volume;
 });
 audioElement.addEventListener("loadedmetadata", () => {
-  volumeControl.value = audio.volume;
+  volumeControl.value = audioElement.volume;
 });
 let numberList = [];
 for (i = 0; i < songs.length; i++) {
@@ -523,21 +523,22 @@ if (numberList.length > 0) {
 }
 document.addEventListener("click", (e) => {
   if (e.target.id == "nextplaybutton" || e.target.id == "preplaybutton") {
-    audioElement.src = songs[randomNumber].filePath;
-    audioElement.play();
-    mainplaybutton.classList.remove("fa-circle-play");
-    mainplaybutton.classList.add("fa-circle-pause");
-    firstPlayButton.classList.remove("fa-circle-play");
-    firstPlayButton.classList.add("fa-circle-pause");
-    document.getElementById("songBannerImg").src =
-      songs[randomNumber].coverPath;
-    document.getElementById("masterPlayBanner").src =
-      songs[randomNumber].coverPath;
-    document.getElementById("masterPlayName").innerText =
-      songs[randomNumber].songName;
-    document.getElementById("masterPlayMovie").innerText =
-      songs[randomNumber].movieName;
-    document.getElementById("TotalTime").innerText =
-      songs[randomNumber].duration;
+    if (numberList.length > 0) {
+      let randomNumber =
+        numberList[Math.floor(Math.random() * (numberList.length - 1))];
+      songIndex = randomNumber;
+      audioElement.src = songs[songIndex].filePath;
+      audioElement.play();
+      mainplaybutton.classList.remove("fa-circle-play");
+      mainplaybutton.classList.add("fa-circle-pause");
+      document.getElementById("masterPlayBanner").src =
+        songs[songIndex].coverPath;
+      document.getElementById("masterPlayName").innerText =
+        songs[songIndex].songName;
+      document.getElementById("masterPlayMovie").innerText =
+        songs[randomNumber].movieName;
+      document.getElementById("TotalTime").innerText =
+        songs[songIndex].duration;
+    }
   }
 });

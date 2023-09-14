@@ -416,10 +416,8 @@ songItems.forEach((element, i) => {
 });
 Array.from(document.getElementsByClassName("songName")).forEach((element) => {
   element.addEventListener("click", (e) => {
-    console.log(e.target.className);
     Index = parseInt(e.target.id);
     audioElement.src = songs[Index].filePath;
-
     audioElement.play();
     mainplaybutton.classList.remove("fa-circle-play");
     mainplaybutton.classList.add("fa-circle-pause");
@@ -430,7 +428,6 @@ Array.from(document.getElementsByClassName("songName")).forEach((element) => {
     document.getElementById("masterPlayName").innerText = songs[Index].songName;
     document.getElementById("masterPlayMovie").innerText =
       songs[Index].movieName;
-    currenttime();
     document.getElementById("TotalTime").innerText = songs[Index].duration;
   });
 });
@@ -461,7 +458,7 @@ document.addEventListener("click", (e) => {
     }
   }
   if (e.target.id == "nextplaybutton") {
-    if (songIndex >= 18) {
+    if (songIndex >= 35) {
       songIndex = 0;
     } else {
       songIndex += 1;
@@ -483,7 +480,7 @@ document.addEventListener("click", (e) => {
   }
   if (e.target.id == "preplaybutton") {
     if (songIndex <= 0) {
-      songIndex = 18;
+      songIndex = 35;
     } else {
       songIndex -= 1;
     }
